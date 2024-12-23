@@ -1,0 +1,65 @@
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+  height: 700px;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  display: grid;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1.5fr 1.5fr 2fr;
+  grid-template-areas: "Header Menu Menu Menu" "Hero Hero Hero Hero" "Main Main . Image" "Main Main . Extra" "Banner Banner Banner Banner";
+}
+.Header {
+  grid-area: Header;
+  background: black;
+  align-content: center;
+}
+.Menu {
+  grid-area: Menu;
+  background: red;
+  align-content: center;
+}
+.Hero {
+  grid-area: Hero;
+  background-color: #4d86c7;
+  align-content: center;
+}
+.Main {
+  grid-area: Main;
+  background: #23344c;
+  align-content: center;
+}
+.Image {
+  grid-area: Image;
+  background: rgb(173, 173, 207);
+  align-content: center;
+}
+.Extra {
+  grid-area: Extra;
+  background: lime;
+  align-content: center;
+}
+.Banner {
+  grid-area: Banner;
+  background: #ffd167;
+  align-content: center;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1.5fr 1.5fr;
+    grid-template-areas: "Header Header Header" "Hero Hero Hero" "Menu Main Main" "Menu Banner Banner" "Menu Extra Image";
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+    grid-template-areas: "Header" "Menu" "Hero" "Main" "Banner" "Extra" "Image";
+  }
+}
